@@ -539,6 +539,32 @@
     .card-screen img { max-height: 360px; }
     .stat-row { grid-template-columns: repeat(2, 1fr); }
     header.hero h1 { font-size: 24px; }
+
+    /* Summary card mobil rejimdə: stats alta düşsün, mətnin yanında olmasın */
+    .summary-card {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 22px 20px;
+    }
+    .summary-card .left h2 { font-size: 20px; }
+    .summary-card .left p { font-size: 13.5px; line-height: 1.6; }
+    .summary-card .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .summary-card .stat-card { padding: 14px 14px; }
+    .summary-card .stat-card .num { font-size: 26px; }
+    .summary-card .stat-card .lbl { font-size: 10px; letter-spacing: 0.3px; }
+  }
+
+  /* Çox dar ekranlar (iPhone SE, dar telefonlar) */
+  @media (max-width: 480px) {
+    .summary-panel { padding: 0 16px; margin-top: -40px; }
+    .summary-card { padding: 18px 16px; }
+    .container { padding: 0 16px; }
+    header.hero { padding: 28px 16px 22px; }
+    header.hero h1 { font-size: 22px; }
+    .page-nav { padding: 8px 16px; }
+    .page-nav a { font-size: 12px; padding: 6px 10px; }
+    .cover-card { padding: 36px 24px 40px; }
+    .cover-card h1 { font-size: 32px; }
   }
 </style>
 </head>
