@@ -540,9 +540,14 @@
     .stat-row { grid-template-columns: repeat(2, 1fr); }
     header.hero h1 { font-size: 24px; }
 
+    /* Summary panel header-i örtməsin - negative margin-i sıfırla */
+    .summary-panel {
+      margin-top: 16px !important;
+      padding: 0 20px;
+    }
     /* Summary card mobil rejimdə: stats alta düşsün, mətnin yanında olmasın */
     .summary-card {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr !important;
       gap: 20px;
       padding: 22px 20px;
     }
@@ -556,7 +561,7 @@
 
   /* Çox dar ekranlar (iPhone SE, dar telefonlar) */
   @media (max-width: 480px) {
-    .summary-panel { padding: 0 16px; margin-top: -40px; }
+    .summary-panel { padding: 0 16px; margin-top: 14px !important; }
     .summary-card { padding: 18px 16px; }
     .container { padding: 0 16px; }
     header.hero { padding: 28px 16px 22px; }
