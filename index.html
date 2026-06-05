@@ -475,6 +475,7 @@
   .verb.remove { background: #FFD9D9; color: #8B0000; }
   .verb.change { background: #FFE8B8; color: #7A5A00; }
   .verb.restructure { background: #E0DAFB; color: #4A2780; }
+  .verb.teklif { background: #CCE5FF; color: #003D80; }
 
   code { font-family: ui-monospace, "SF Mono", Menlo, monospace;
     background: var(--bg); padding: 2px 6px; border-radius: 3px; font-size: 12px; color: var(--accent); }
@@ -658,7 +659,7 @@
     </div>
     <div class="section-block">
       <div class="lbl">Problem nədir</div>
-      <p>Əsas ekranda Al-khan AI köməkçisi iki yerdə görünür: yuxarı sağ küncdə kiçik rəngarəng dairə kimi və aşağı sağ küncdə daha böyük mavi dairə (online chat) kimi. İkisi də eyni funksiyaya aparır. Onsuz da overload olan ekranda bu, əlavə qarışıqlıq yaradır. Müştəri "bunlar fərqli funksiyadırmı?" sualını verir, biri "duplicate" zənn edir, ya hansını basacağını seçə bilmir.</p>
+      <p>Əsas ekranda Al-khan AI köməkçisi iki yerdə görünür: yuxarı sağ küncdə kiçik rəngarəng dairə kimi və aşağı sağ küncdə daha böyük mavi dairə (online chat) kimi. İkisi də eyni funksiyaya aparır. Onsuz da overload olan ekranda bu, əlavə qarışıqlıq yaradır. Müştəri "bunlar fərqli funksiyadırmı?" sualını verir, biri "duplicate" zənn edir, ya hansını klik edəcəyini seçə bilmir.</p>
     </div>
     <div class="section-block">
       <div class="lbl action">Nə etməli</div>
@@ -697,19 +698,19 @@
     <div class="header-row">
       <div class="pin-marker">
         <span class="pin-number">2</span>
-        <h3>Al-khan yeni feature-dir, amma izahı yoxdur: müştəri bu nə olan şey olduğunu bilmir</h3>
+        <h3>Al-khan yeni product olduğu üçün müştəri xəbərsiz ola bilər: izah lazımdır</h3>
       </div>
       <span class="priority-badge p1">P1</span>
     </div>
     <div class="section-block">
       <div class="lbl">Problem nədir</div>
-      <p>Al-khan yenicə tətbiqə əlavə edilmiş feature-dir. Yuxarıda dayanır, lakin yanında heç bir məlumat yoxdur: "bu nədir, nə işə yarayır, niyə var?". İlk dəfə görən müştəri tıklamağa qorxur, çünki tanış olmayan funksiyaya risk eləməyi seçmir. Heç olmasa müştəri funksiyanı tam başa düşənə qədər yanında izah edici (i) ikonu olmalıdır.</p>
+      <p>Al-khan yenicə tətbiqə əlavə edilmiş feature-dir. Yuxarıda dayanır, lakin yanında heç bir məlumat yoxdur: "bu nədir, nə işə yarayır, niyə var?". İlk dəfə görən müştəri klik etməyə qorxur, çünki tanış olmayan funksiyaya risk eləməyi seçmir. Heç olmasa müştəri funksiyanı tam başa düşənə qədər yanında izah edici (i) ikonu olmalıdır.</p>
     </div>
     <div class="section-block">
       <div class="lbl action">Nə etməli</div>
       <div class="action-block">
         <ul>
-          <li><span class="verb add">ƏLAVƏ ET</span>Al-khan yanına (i) ikonu - basanda nə işə yaradığını izah etsin.</li>
+          <li><span class="verb add">ƏLAVƏ ET</span>Al-khan yanına (i) ikonu - klik edəndə nə işə yaradığını izah etsin.</li>
           <li><span class="verb add">ƏLAVƏ ET</span>İlk dəfə girəndə qısa salamlama: "Salam, mən Al-khan. Sualını yaz."</li>
           <li><span class="verb add">ƏLAVƏ ET</span>7 gün sonra istifadə etməyənə xatırlatma bildirişi.</li>
         </ul>
@@ -800,7 +801,7 @@
       <div class="action-block">
         <ul>
           <li><span class="verb remove">ÇIXAR</span>"Əsas səhifəni redaktə et" düyməsini aşağıdan.</li>
-          <li><span class="verb add">ƏLAVƏ ET</span>Yuxarı sağda kiçik ⚙ ikonu - bir basışla redaktə açılsın.</li>
+          <li><span class="verb add">ƏLAVƏ ET</span>Yuxarı sağda kiçik ⚙ ikonu - bir kliklə redaktə açılsın.</li>
           <li><span class="verb add">ƏLAVƏ ET</span>İlk dəfə qısa banner: "Əsas səhifəni dəyişə bilərsən. Yuxarıdakı ⚙-yə bas."</li>
           <li><span class="verb add">ƏLAVƏ ET</span>Redaktə rejimində: sürüşdür, gizlət/göstər, geri qaytar.</li>
         </ul>
@@ -937,6 +938,7 @@
         <ul>
           <li><span class="verb remove">ÇIXAR</span>"Karbon izləri +" reklamını sağ yuxarıdan.</li>
           <li><span class="verb add">ƏLAVƏ ET</span>Eyni yerə "📥 Çıxarış al" - PDF/Excel formatında.</li>
+          <li><span class="verb add">ƏLAVƏ ET</span>Müştəri "Xərclər" kartına klik edəndə detal ekranı açılır - orada da sağ yuxarıda <b>📥 PDF endir</b> düyməsi olsun (yalnız xərclər üçün ayrıca hesabat).</li>
           <li><span class="verb restructure">YENİDEN QUR</span>Karbon izi məlumatı Xərclərin yanında yer alsın (əgər müştəri açıbsa).</li>
         </ul>
       </div>
@@ -966,21 +968,23 @@
     <div class="header-row">
       <div class="pin-marker">
         <span class="pin-number">3</span>
-        <h3>"Daxilolmalar" kartı yoxdur: yalnız Xərclər göstərilir, müştəri ümumi maliyyə şəklini görmür</h3>
+        <h3>"Balans dinamikası" əvəzinə "Mədaxil" kartı olmalıdır: yalnız Xərclər göstərilir, müştəri ümumi maliyyə şəklini görmür</h3>
       </div>
       <span class="priority-badge p0">P0</span>
     </div>
     <div class="section-block">
       <div class="lbl">Problem nədir</div>
-      <p>Tarixçə tabında "Xərclər CARI AY" kartı var (276.77 ₼), lakin "<b>Daxilolmalar CARI AY</b>" kartı yoxdur. Müştəri ay ərzində nə qədər qazandığını görmür, yalnız nə qədər xərclədiyini görür. Ümumi maliyyə şəkli alınmır: gəlir mi xərcdən çox, yoxsa az? Saldo neçədir? Bu, müştərinin maliyyə öz-idarəsi üçün ən vacib məlumatdır. Yalnız itki tərəfini göstərmək (xərclər) müştəridə "loss aversion" stress yaradır, qazancla balanslaşdırılmalıdır.</p>
+      <p>Tarixçə tabında "Xərclər CARI AY" kartı var (276.77 ₼), həm də "Balans dinamikası SON 24 SAAT" kartı var - amma bu mənasız insightdir. Müştəri "Mədaxil CARI AY" kartı görmür - ay ərzində nə qədər qazandığını bilmir, yalnız nə qədər xərclədiyini görür. Ümumi maliyyə şəkli alınmır: gəlir mi xərcdən çox, yoxsa az? Saldo neçədir? Bu, müştərinin maliyyə öz-idarəsi üçün ən vacib məlumatdır. Yalnız itki tərəfini göstərmək (xərclər) müştəridə "loss aversion" stress yaradır, qazancla balanslaşdırılmalıdır.</p>
     </div>
     <div class="section-block">
       <div class="lbl action">Nə etməli</div>
       <div class="action-block">
         <ul>
-          <li><span class="verb add">ƏLAVƏ ET</span>"Xərclər" yanına "Daxilolmalar CARI AY" kartı.</li>
-          <li><span class="verb add">ƏLAVƏ ET</span>Aşağıda saldo: "Bu ay: +124 ₼" və ya "-52 ₼".</li>
-          <li><span class="verb add">ƏLAVƏ ET</span>Qısa insight: "Keçən aya nisbətən 8% çox qazanmısan".</li>
+          <li><span class="verb remove">ÇIXAR</span>"Balans dinamikası SON 24 SAAT" kartını - 24 saatlıq qrafik müştəriyə dəyər vermir.</li>
+          <li><span class="verb add">ƏLAVƏ ET</span>Yerinə "Mədaxil CARI AY" kartı (Xərclər kartı ilə yan-yana, yaşıl aksent).</li>
+          <li><span class="verb add">ƏLAVƏ ET</span>Hər iki kartda (Xərclər və Mədaxil) sağ yuxarıda <b>📥 PDF endir</b> ikonu - müştəri kartı açıb birbaşa hesabat endirə bilsin.</li>
+          <li><span class="verb teklif">TƏKLİF</span>Aşağıda saldo: "Bu ay: +124 ₼" və ya "-52 ₼".</li>
+          <li><span class="verb teklif">TƏKLİF</span>Qısa insight: "Keçən aya nisbətən 8% çox qazanmısan".</li>
         </ul>
       </div>
     </div>
@@ -1022,8 +1026,7 @@
       <div class="action-block">
         <ul>
           <li><span class="verb remove">ÇIXAR</span>"Büdcə yarat" kartını Tarixçədən.</li>
-          <li><span class="verb restructure">YENİDEN QUR</span>Büdcə "Daha çox" və ya Əsas səhifədə olsun.</li>
-          <li><span class="verb add">ƏLAVƏ ET</span>Tarixçədə ağıllı təklif: "Bu ay yeməyə çox xərcləmisən. Büdcə təyin edək?"</li>
+          <li><span class="verb change">DƏYİŞDİR</span>Büdcə yuxarıda ikon kimi göstərilə bilər - tab içində yox, başlıq sırasında.</li>
         </ul>
       </div>
     </div>
@@ -1064,7 +1067,7 @@
       <div class="lbl action">Nə etməli</div>
       <div class="action-block">
         <ul>
-          <li><span class="verb restructure">YENİDEN QUR</span>5 filtr əvəzinə tək "Filtrlər" düyməsi - basanda bottom-sheet açılsın.</li>
+          <li><span class="verb restructure">YENİDEN QUR</span>5 filtr əvəzinə tək "Filtrlər" düyməsi - klik edəndə bottom-sheet açılsın.</li>
           <li><span class="verb add">ƏLAVƏ ET</span>Ən üstdə tarix preset-ləri: Son 7 gün, Bu ay, Son 3 ay.</li>
           <li><span class="verb change">DƏYİŞDİR</span>"Hesablama" → "Valyuta".</li>
           <li><span class="verb add">ƏLAVƏ ET</span>Aktiv filtr sayı görünsün: "3 filtr aktiv · Təmizlə".</li>
@@ -1110,7 +1113,6 @@
         <ul>
           <li><span class="verb change">DƏYİŞDİR</span>Şəxs adı olan əməliyyatlara avatar (yoxdursa baş hərflər: "AA"). Kart ikonu yalnız bank əməliyyatları üçün.</li>
           <li><span class="verb change">DƏYİŞDİR</span>Bütün xərclər qırmızı, daxilolmalar yaşıl - heç biri qara qalmasın.</li>
-          <li><span class="verb add">ƏLAVƏ ET</span>Hər əməliyyatın yanında uzun-tap menyu (Problem 6-da izah).</li>
         </ul>
       </div>
     </div>
@@ -1139,21 +1141,21 @@
     <div class="header-row">
       <div class="pin-marker">
         <span class="pin-number">7</span>
-        <h3>Hər əməliyyatın yanında "Problemi bildir" düyməsi yoxdur</h3>
+        <h3>Müştəri əməliyyatla bağlı problemi tətbiqdən bildirə bilmir - yuxarıda Al-khan AI vasitəsi ilə həll oluna bilər</h3>
       </div>
       <span class="priority-badge p1">P1</span>
     </div>
     <div class="section-block">
       <div class="lbl">Problem nədir</div>
-      <p>Müştəri əməliyyat siyahısında səhv və ya şübhəli hərəkət gördükdə (məs. tanımadığı kart yazılışı, ikiqat tutma, uğursuz köçürmə) onu birbaşa tətbiqdə bildirə bilmir. Hər əməliyyat üzərində uzun-tap, sürüşdür və ya "..." menyu açılmır. Müştəri zəng mərkəzinə zəng vurmalıdır - bu, müştəri üçün vaxt, bank üçün isə adambaşı 4-7 dollar xərc deməkdir. Bundan başqa, "Şablon yarat", "Yenidən göndər", "Çek paylaş" kimi tez-tez lazım olan əməliyyatlar da əlçatan deyil.</p>
+      <p>Müştəri əməliyyat siyahısında şübhəli hərəkət gördükdə (tanımadığı kart yazılışı, ikiqat tutma, uğursuz köçürmə) onu birbaşa tətbiqdə bildirə bilmir. Müştəri zəng mərkəzinə zəng vurmalıdır - müştəri üçün vaxt, bank üçün adambaşı 4-7 dollar xərc. Lakin bu məsələ ayrı düymə əlavə etməklə deyil, yuxarıda göstərdiyimiz Al-khan AI köməkçisi vasitəsilə həll oluna bilər: müştəri əməliyyatı seçib "Bu əməliyyat üzrə problem var" deyə Al-khan-a bildirməlidir.</p>
     </div>
     <div class="section-block">
       <div class="lbl action">Nə etməli</div>
       <div class="action-block">
         <ul>
-          <li><span class="verb add">ƏLAVƏ ET</span>Hər əməliyyatın yanında "..." menyu: Problemi bildir, Şikayət et, Çek paylaş, Şablon yarat.</li>
-          <li><span class="verb add">ƏLAVƏ ET</span>"Problemi bildir" - form açılsın, əməliyyat avtomatik dolsun, müştəri yalnız səbəbi seçsin.</li>
-          <li><span class="verb add">ƏLAVƏ ET</span>Göndərdikdən sonra: "Müraciətin qeydə alındı. Cavab 2 iş günü ərzində gələcək."</li>
+          <li><span class="verb add">ƏLAVƏ ET</span>Müştəri əməliyyatı uzun-tap edəndə "Al-khan ilə bu əməliyyat üzrə danış" seçimi gəlsin.</li>
+          <li><span class="verb add">ƏLAVƏ ET</span>Al-khan-a əməliyyat avtomatik kontekst kimi ötürülsün - müştəri yalnız problem növünü deməlidir.</li>
+          <li><span class="verb add">ƏLAVƏ ET</span>Al-khan cavab versin: "Müraciətin qeydə alındı. Cavab 2 iş günü ərzində gələcək."</li>
         </ul>
       </div>
     </div>
@@ -1227,7 +1229,7 @@
     <div class="page-meta">
       <span class="chip"><b>Səhifə 3 / 48</b></span>
       <span class="chip">Aşağıdakı tab</span>
-      <span class="chip accent"><b>6</b> problem aşkar edildi</span>
+      <span class="chip accent"><b>5</b> problem aşkar edildi</span>
     </div>
   </div>
 </header>
@@ -1236,22 +1238,22 @@
   <div class="summary-card">
     <div class="left">
       <div class="micro">Diaqnostika</div>
-      <h2>Kəşf et - app-in ən qarışıq və ən təkrarlanan tabı</h2>
-      <p>Müştəri əsas ekranda gördüyü EDV və Keşbek widget-lərini burada bir də görür. Sığorta həm yuxarıdakı kart sırasında, həm aşağıdakı Tərəfdaş xidmətlərində <b>iki dəfə təkrarlanır</b>. Yuxarıdakı 4 üst kart məzmunu (Tətbiqdə yeniliklər, Xəbərlər) köhnəlmiş, qara ekran və error verir, gec yüklənir - qeyri-professional görüntüdür. Bank xidmətləri (Randevu, Kart sifarişi, Kredit sifarişi) buraya aid deyil. Rəqib banklarda (<a href="https://www.revolut.com/" target="_blank" rel="noopener" class="ref-link">Revolut</a>, <a href="https://monzo.com/" target="_blank" rel="noopener" class="ref-link">Monzo</a>, <a href="https://n26.com/" target="_blank" rel="noopener" class="ref-link">N26</a>) Kəşf et tabında yalnız təkliflər və partnyor endirimləri var - bank xidmətləri orada görünmür. ABB-də isə hər product team öz məhsulunu göz önündə saxlamağa çalışır, nəticədə müştəri zərər çəkir.</p>
+      <h2>Kəşf et - bu bölmədə təkrarlanan məhsullar var</h2>
+      <p>Müştəri əsas ekranda gördüyü EDV və Keşbek widget-lərini burada bir də görür. Sığorta həm yuxarıdakı kart sırasında, həm aşağıdakı Tərəfdaş xidmətlərində <b>iki dəfə təkrarlanır</b>. Yuxarıdakı 4 üst kart məzmunu (Tətbiqdə yeniliklər, Xəbərlər) köhnəlmiş, qara ekran və error verir, gec yüklənir - qeyri-professional görüntüdür. Bank xidmətləri (Randevu, Kart sifarişi, Kredit sifarişi) Kəşf et bölməsi üçün uyğun deyil. Rəqib banklarda (<a href="https://www.revolut.com/" target="_blank" rel="noopener" class="ref-link">Revolut</a>, <a href="https://monzo.com/" target="_blank" rel="noopener" class="ref-link">Monzo</a>, <a href="https://n26.com/" target="_blank" rel="noopener" class="ref-link">N26</a>) Kəşf et tabında yalnız təkliflər və partnyor endirimləri var.</p>
     </div>
     <div class="stats">
       <div class="stat-card danger"><div class="num">4</div><div class="lbl">P0 təcili</div></div>
-      <div class="stat-card warn"><div class="num">2</div><div class="lbl">P1 yaxın</div></div>
+      <div class="stat-card warn"><div class="num">1</div><div class="lbl">P1 yaxın</div></div>
       <div class="stat-card info"><div class="num">0</div><div class="lbl">P2</div></div>
-      <div class="stat-card"><div class="num">6</div><div class="lbl">Cəmi problem</div></div>
+      <div class="stat-card"><div class="num">5</div><div class="lbl">Cəmi problem</div></div>
     </div>
   </div>
 </div>
 
 <div class="toolbar" data-page="3">
   <div class="toolbar-inner">
-    <button class="filter-btn active" data-filter="all">Hamısı (6)</button>
-    <div class="counter"><b>6</b> / 6 problem görünür</div>
+    <button class="filter-btn active" data-filter="all">Hamısı (5)</button>
+    <div class="counter"><b>5</b> / 5 problem görünür</div>
   </div>
 </div>
 
@@ -1271,7 +1273,7 @@
     <div class="header-row">
       <div class="pin-marker">
         <span class="pin-number">1</span>
-        <h3>Bütün app-də element təkrarı: hər product team öz məhsulunu hər yerə qoymağa çalışır</h3>
+        <h3>Kəşf et bölməsində təkrar olunan məhsullar var - bu bölmə üçün uyğun deyil</h3>
       </div>
       <span class="priority-badge p0">P0</span>
     </div>
@@ -1287,7 +1289,6 @@
         <ul>
           <li><span class="verb remove">ÇIXAR</span>EDV və Keşbek widget-ləri Kəşf et-dən (yeri Əsas səhifədir).</li>
           <li><span class="verb remove">ÇIXAR</span>Sığortanın bir təkrarını - bir səhifədə 2 dəfə olmamalıdır.</li>
-          <li><span class="verb restructure">YENİDEN QUR</span>Hər funksiya yalnız bir yerdə yaşasın.</li>
           <li><span class="verb add">ƏLAVƏ ET</span>Komandalar arası "tək yer" qaydası - IA Council qurulsun.</li>
         </ul>
       </div>
@@ -1330,9 +1331,7 @@
       <div class="lbl action">Nə etməli</div>
       <div class="action-block">
         <ul>
-          <li><span class="verb change">VARİANT A</span>Feature-i yenidən qur - məzmun hər həftə yenilənsin, qara ekran olmasın.</li>
-          <li><span class="verb change">VARİANT B</span>Tamamilə sil. Yerinə Partnyor endirimlərini böyüt.</li>
-          <li><span class="verb add">ƏLAVƏ ET</span>Hər halda: qara ekran yox, "yüklənə bilmədi - yenidən cəhd et" mesajı.</li>
+          <li><span class="verb change">DƏYİŞDİR</span>Stories bölməsi ya ümumən çıxarılsın, ya da məzmun mütəmadi yenilənsin və error/qara ekran problemləri həll edilsin.</li>
         </ul>
       </div>
     </div>
@@ -1411,15 +1410,15 @@
     </div>
     <div class="section-block">
       <div class="lbl">Problem nədir</div>
-      <p>ABB ekosistemində 3 fərqli "Fayda" var: <b>FaydaMania</b> (pulsuz kupon proqramı, marketinq endirimləri), <b>Fayda Max</b> (premium pullu abunəlik, kart benefit-ləri), <b>Faydalı klub</b> (Tərəfdaş bölməsində - nə olduğu aydın deyil). Müştəri 3 adın fərqini başa düşmür. Hansı pulluq? Hansı pulsuz? Hansı hansı ilə kombinə olunur? Faydalı klub Fayda Max abunəliyinin bir hissəsidir? Yoxsa ayrı? Brand chaos.</p>
+      <p>ABB ekosistemində 3 fərqli "Fayda" var: <b>FaydaMania</b> (pulsuz kupon proqramı, marketinq endirimləri), <b>Fayda Max</b> (premium pullu abunəlik, kart benefit-ləri), <b>Faydalı klub</b> (Tərəfdaş bölməsində - nə olduğu aydın deyil). Müştəri 3 adın fərqini başa düşmür. Hansı pulludur? Hansı pulsuz? Hansı hansı ilə kombinə olunur? Faydalı klub Fayda Max abunəliyinin bir hissəsidir? Yoxsa ayrı? Brand chaos.</p>
     </div>
     <div class="section-block">
       <div class="lbl action">Nə etməli</div>
       <div class="action-block">
         <ul>
-          <li><span class="verb restructure">YENİDEN QUR</span>Bir "Fayda" çətiri qur: Fayda Klub içində FaydaMania (kuponlar) və Fayda Max (premium).</li>
-          <li><span class="verb add">ƏLAVƏ ET</span>Hər birinə 1 cümlə izah: "FaydaMania - pulsuz kuponlar", "Fayda Max - aylıq abunəlik".</li>
-          <li><span class="verb change">DƏYİŞDİR</span>"Faydalı klub" yenidən adlanmalı və ya birləşdirilməlidir.</li>
+          <li><span class="verb add">ƏLAVƏ ET</span>Hər Fayda adının yanında izah edici kiçik (i) ikonu - müştəri klik edəndə fərqi qısa şəkildə anlatsın.</li>
+          <li><span class="verb teklif">TƏKLİF</span>Yeni dizayn ilə müqayisə cədvəli: FaydaMania (pulsuz / kuponlar) vs Fayda Max (pullu / aylıq abunəlik) vs Faydalı klub (partnyor endirimləri) - müştəri ferqi bir baxışla anlasın.</li>
+          <li><span class="verb change">DƏYİŞDİR</span>"Faydalı klub" adı brand komitəsinin müzakirəsinə açılsın - digər iki ad ilə qarışıqlıq yaradır.</li>
         </ul>
       </div>
     </div>
@@ -1448,50 +1447,6 @@
     <div class="header-row">
       <div class="pin-marker">
         <span class="pin-number">5</span>
-        <h3>4 üst kart eyni vizual çəkidə + qalın mavi outline vizual gərginlik yaradır</h3>
-      </div>
-      <span class="priority-badge p1">P1</span>
-    </div>
-    <div class="section-block">
-      <div class="lbl">Problem nədir</div>
-      <p>Kəşf et-in yuxarısındakı 4 kart (Partnyor endirimləri, Tətbiqdə yeniliklər, Xəbərlər, Sığorta) eyni böyük ölçüdədir, eyni qalın mavi border ilə əhatə olunub. Lakin onların müştəri üçün dəyəri tamamilə fərqlidir: Partnyor endirimləri = aktiv dəyər; Tətbiqdə yeniliklər = changelog (low value); Xəbərlər = newsletter (low value); Sığorta = məhsul satışı. Eyni ağırlıqda göstərmək vizual prioritet itkisidir. Qalın mavi border əlavə vizual gərginlik yaradır. Plus: sağda kəsilib ("Sığo..."), scroll affordance yoxdur.</p>
-    </div>
-    <div class="section-block">
-      <div class="lbl action">Nə etməli</div>
-      <div class="action-block">
-        <ul>
-          <li><span class="verb restructure">YENİDEN QUR</span>Partnyor endirimləri böyük əsas kart olsun, qalanı kiçik.</li>
-          <li><span class="verb remove">ÇIXAR</span>Qalın mavi outline-ları - yumşaq kölgə işlət.</li>
-          <li><span class="verb remove">ÇIXAR</span>"Tətbiqdə yeniliklər" və "Xəbərlər" - Dəstək altına keçir.</li>
-          <li><span class="verb add">ƏLAVƏ ET</span>Sağ kənarda yarımgörünən kart (daha çox var işarəsi).</li>
-        </ul>
-      </div>
-    </div>
-    <div class="section-block">
-      <div class="lbl law">Hansı qaydaya əsaslanır</div>
-      <p><b>Visual Hierarchy</b> (Edward Tufte, Jan White): vizual ağırlıq məzmun dəyərinə uyğun olmalıdır. <b><a href="https://www.nngroup.com/articles/gestalt-figure-ground/" target="_blank" rel="noopener" class="ref-link">Gestalt Figure/Ground</a></b>: vurğu yalnız fərq olduqda işləyir. <b><a href="https://m3.material.io/" target="_blank" rel="noopener" class="ref-link">Material Design</a> Elevation Patterns</b> (Google 2014–2023): outline-based card design 2018-dən sonra köhnə pattern sayılır, soft shadow yeni standart.</p>
-    </div>
-    <div class="section-block">
-      <div class="lbl research">Tədqiqatlar nə deyir</div>
-      <p><a href="https://m3.material.io/" target="_blank" rel="noopener" class="ref-link">Material Design</a> Guidelines (Google): qalın border-lər müasir UI-də vizual yorğunluq artırır. <a href="https://baymard.com/" target="_blank" rel="noopener" class="ref-link">Baymard</a> "Card UI Patterns" (2022): vizual hierarchy olan kart sistemlərdə click-through rate 2.8x yüksəkdir. <a href="https://www.nngroup.com/" target="_blank" rel="noopener" class="ref-link">NN/g</a> "Mobile Card Design" (2021): qalın outline-lər scroll fatigue-u 23% artırır. <a href="https://developer.apple.com/design/human-interface-guidelines/" target="_blank" rel="noopener" class="ref-link">Apple HIG</a>, iOS Design System: kart elevation-da yalnız soft shadow + 1px subtle border tövsiyə olunur.</p>
-    </div>
-  </div>
-</article>
-
-<article class="issue-card" data-priority="p1">
-  <div class="card-screen">
-    <img src="kesfet.PNG" alt="Kəşf et ekranı"
-         onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='IMG_9441.PNG';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
-    <div class="no-image" style="display:none;">
-      <div class="icon">📱</div><div>Şəkil tapılmadı.</div>
-      <code>kesfet.PNG</code><code>IMG_9441.PNG</code>
-    </div>
-    <div class="filename">kesfet.PNG</div>
-  </div>
-  <div class="card-content">
-    <div class="header-row">
-      <div class="pin-marker">
-        <span class="pin-number">6</span>
         <h3>Faydalı klub və TamKart partnyorları aşağıdadır, halbuki real "kəşf edilesi" elementlərdir</h3>
       </div>
       <span class="priority-badge p1">P1</span>
@@ -1548,7 +1503,7 @@
     <div class="left">
       <div class="micro">Diaqnostika</div>
       <h2>Daha çox - qarışıq labirint</h2>
-      <p>Daha çox-da 4 alt-tab var. Müştəri əvvəl hansı tab-a, sonra orada hansı şeyə basacağını seçməlidir - 2 dəfə qərar. Ən lazımlı hissə (Hesab arayışı) ən sondakı tabdadır, çoxu tapmır. Profil 2 yerdədir: yuxarı avatar tap (mobil, e-poçt, çıxış) və Daha çox → Profil və parametrlər (Köçürmə sorğuları, AniPay, Karbon izi). Yuxarıda yardım, chat, bildiriş düymələri yoxdur. Rəqib bank (Kapital) bunu daha sadə qurub. <b>Tövsiyə:</b> 5 fərqli yaşda istifadəçi ilə test edək - çoxlu yüklənmə müştərini itirir.</p>
+      <p>Daha çox-da 4 alt-tab var. Müştəri əvvəl hansı tab-a, sonra orada hansı şeyə klik edəcəyini seçməlidir - 2 dəfə qərar. Ən lazımlı hissə (Hesab arayışı) ən sondakı tabdadır, çoxu tapmır. Profil 2 yerdədir: yuxarı avatar tap (mobil, e-poçt, çıxış) və Daha çox → Profil və parametrlər (Köçürmə sorğuları, AniPay, Karbon izi). Yuxarıda yardım, chat, bildiriş düymələri yoxdur. Rəqib bank (Kapital) bunu daha sadə qurub. <b>Tövsiyə:</b> 5 fərqli yaşda istifadəçi ilə test edək - çoxlu yüklənmə müştərini itirir.</p>
     </div>
     <div class="stats">
       <div class="stat-card danger"><div class="num">5</div><div class="lbl">P0 təcili</div></div>
@@ -1927,7 +1882,7 @@
     <div class="section-block"><div class="lbl">Problem nədir</div><p>Hər kartın altında chip-lər (kiçik məlumat etiketləri) var. Lakin terminlər anlaşılmazdır:</p><ul style="margin-top:8px;list-style:disc;padding-left:20px;"><li><b>"Fayda Max X 1.3"</b> - Fayda Max üzvlüyüm yoxdur, bu mənə tətbiq olunur? Tooltip yoxdur.</li><li><b>"Qalığa faiz 6%"</b> - hansı qalıq? Hesabdakı pula görəmi? Hansı şərtlərlə?</li><li><b>"Mil tarifi 2 AZN = 1 MİL (0.50)"</b> - bu rəqəmlər nə deməkdir? 0.50 nədir?</li><li><b>"Müddət 5 İL"</b> - kartın etibarlılıq müddəti? Müştəri bilmir.</li><li><b>"Lounge zalları 10 DƏFƏ"</b> - illik, aylıq, ümumi? Hansı havalimanları?</li></ul><p style="margin-top:8px;">Müştəri terminləri başa düşmür, "Daha ətraflı" düyməsinə basır - uzun mətnli ekrana keçir, vaxt itirir, çoxu geri qayıdır.</p></div>
     <div class="section-block"><div class="lbl action">Nə etməli</div><div class="action-block"><ul><li><span class="verb add">ƏLAVƏ ET</span>Hər chip-ə uzun-tap tooltip - 1-2 cümlə izah.</li><li><span class="verb change">DƏYİŞDİR</span>"Qalığa faiz 6%" → "Hesab balansına 6% illik gəlir"; "Mil tarifi 2 AZN = 1 MİL" → "Hər 2 AZN xərclədikdə 1 mil".</li><li><span class="verb add">ƏLAVƏ ET</span>"Müddət" altına: "Kartın etibarlılıq müddəti".</li><li><span class="verb add">ƏLAVƏ ET</span>Lounge və FastTrack üçün konkret: "İllik 10 dəfə · Bakı və 100+ beynəlxalq havalimanı".</li></ul></div></div>
     <div class="section-block"><div class="lbl law">Hansı qaydaya əsaslanır</div><p><b>Plain Language Principle</b>: bank terminologiyası yerinə müştərinin gündəlik dili. <b><a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank" rel="noopener" class="ref-link">Nielsen Heuristik</a> #10 - Help &amp; Documentation</b>: müştəri kömək sənədinə getmədən kontekstual izah ala bilməlidir. <b><a href="https://www.nngroup.com/articles/information-scent/" target="_blank" rel="noopener" class="ref-link">Information Scent</a> Theory</b> (Pirolli, 2007): müştəri chip-i görüb nə deməkdir bilməlidir - yoxsa ya tıklamır, ya səhv yozur.</p></div>
-    <div class="section-block"><div class="lbl research">Tədqiqatlar nə deyir</div><p><a href="https://www.nngroup.com/" target="_blank" rel="noopener" class="ref-link">NN/g</a> "Plain Language in Banking" (2022): müştərilərin 67%-i bank terminologiyasını çətin başa düşür, gündəlik söz işlədildikdə anlama 89%-ə yüksəlir. <a href="https://www.apple.com/apple-card/" target="_blank" rel="noopener" class="ref-link">Apple Card</a> Benefits, <a href="https://www.revolut.com/" target="_blank" rel="noopener" class="ref-link">Revolut</a> Plan Comparison - hamısında hər feature yanında 1-2 cümləlik izah var. <a href="https://baymard.com/" target="_blank" rel="noopener" class="ref-link">Baymard</a> "Product Detail UX" (2023): tooltip olan tətbiqlərdə "Daha ətraflı" basışları 58% azalır - müştəri kontekstdə cavabı tapır.</p></div>
+    <div class="section-block"><div class="lbl research">Tədqiqatlar nə deyir</div><p><a href="https://www.nngroup.com/" target="_blank" rel="noopener" class="ref-link">NN/g</a> "Plain Language in Banking" (2022): müştərilərin 67%-i bank terminologiyasını çətin başa düşür, gündəlik söz işlədildikdə anlama 89%-ə yüksəlir. <a href="https://www.apple.com/apple-card/" target="_blank" rel="noopener" class="ref-link">Apple Card</a> Benefits, <a href="https://www.revolut.com/" target="_blank" rel="noopener" class="ref-link">Revolut</a> Plan Comparison - hamısında hər feature yanında 1-2 cümləlik izah var. <a href="https://baymard.com/" target="_blank" rel="noopener" class="ref-link">Baymard</a> "Product Detail UX" (2023): tooltip olan tətbiqlərdə "Daha ətraflı" kliklərı 58% azalır - müştəri kontekstdə cavabı tapır.</p></div>
   </div>
 </article>
 
@@ -2027,7 +1982,7 @@
       <span class="priority-badge p2">P2</span>
     </div>
     <div class="section-block"><div class="lbl">Problem nədir</div><p>Sürətli keçidin birinci düyməsi <b>"Skan"</b>. Müştəri basmadan əvvəl düşünür: <em>"QR kod skan? Sənəd skan? Kart skan? Hər üçü?"</em> Düymənin ikonu kamera, lakin nə skan etdiyi yazılmayıb. Müştəri risk götürüb basır - açılır, məsələn, QR skaner. Lakin müştərinin niyyəti kart skan etmək idisə, vaxt itirir, çıxır. Bu, <b>ambiguous labeling</b> problemidir: bir ada bir neçə fərqli funksiya yığılıb.</p></div>
-    <div class="section-block"><div class="lbl action">Nə etməli</div><div class="action-block"><ul><li><span class="verb change">DƏYİŞDİR</span>"Skan" → "QR Skan" (yalnız QR oxuyursa).</li><li><span class="verb add">ƏLAVƏ ET</span>Çoxsaylı funksiya varsa - basanda seçim açılsın: QR / Bank kartı / Sənəd.</li><li><span class="verb change">DƏYİŞDİR</span>İkon altında: "Skan: QR və sənəd".</li></ul></div></div>
+    <div class="section-block"><div class="lbl action">Nə etməli</div><div class="action-block"><ul><li><span class="verb change">DƏYİŞDİR</span>"Skan" → "QR Skan" (yalnız QR oxuyursa).</li><li><span class="verb add">ƏLAVƏ ET</span>Çoxsaylı funksiya varsa - klik edəndə seçim açılsın: QR / Bank kartı / Sənəd.</li><li><span class="verb change">DƏYİŞDİR</span>İkon altında: "Skan: QR və sənəd".</li></ul></div></div>
     <div class="section-block"><div class="lbl law">Hansı qaydaya əsaslanır</div><p><b>Affordance Principle</b> (Norman, "The Design of Everyday Things"): müştəri düyməyə baxıb nə baş verəcəyini bilməlidir. <b>Ambiguity Reduction</b>: ad bir neçə fərqli funksiyanı bildirə bilməz - ya konkret ad, ya da seçim açan menyu. <b><a href="https://www.nngroup.com/articles/information-scent/" target="_blank" rel="noopener" class="ref-link">Information Scent</a></b> (Pirolli): düymədə "qoxu" (nəyə aparacağı işarəsi) olmalıdır.</p></div>
     <div class="section-block"><div class="lbl research">Tədqiqatlar nə deyir</div><p><a href="https://www.apple.com/wallet/" target="_blank" rel="noopener" class="ref-link">Apple Wallet</a> - <em>"Scan QR Code"</em>, <a href="https://www.revolut.com/" target="_blank" rel="noopener" class="ref-link">Revolut</a> - <em>"Scan to Pay"</em>, <a href="https://monzo.com/" target="_blank" rel="noopener" class="ref-link">Monzo</a> - <em>"Scan to Send"</em>. Hər birində düymə konkret deyir nə skan etdiyini. <a href="https://www.nngroup.com/" target="_blank" rel="noopener" class="ref-link">NN/g</a> "Icon Usability" (2022): ikon + ambiguous mətn olan düymələrdə yanlış tıklama 2.3 dəfə yüksəkdir. <a href="https://baymard.com/" target="_blank" rel="noopener" class="ref-link">Baymard</a> "Quick Action UX" (2023): konkret adlandırılmış düymələrdə (QR Scan, Card Scan) tap-to-action vaxtı 41% qısalır, müştəri etibarı 27% yüksəlir.</p></div>
   </div>
@@ -2068,7 +2023,7 @@
   });
 
   // PAGE NAVIGATION - WEBSITE TAB STYLE
-  // Hər tab basanda yalnız o səhifə görünür, qalanları gizlədir
+  // Hər tab klik edəndə yalnız o səhifə görünür, qalanları gizlədir
   const navLinks = document.querySelectorAll('.page-nav a');
   const totalPages = 7;
 
@@ -2133,14 +2088,345 @@
   showPage(1);
 
   // COLLAPSIBLE: "Hansı qaydaya əsaslanır" və "Tədqiqatlar nə deyir" başlıqları
-  // Default: bağlı (collapsed). Müştəri başlığa basanda açılır.
+  // Default: bağlı (collapsed). Müştəri başlığa klik edəndə açılır.
   document.querySelectorAll('.lbl.law, .lbl.research').forEach(lbl => {
     lbl.classList.add('collapsed');
     lbl.addEventListener('click', () => {
       lbl.classList.toggle('collapsed');
     });
   });
+
+  // ============== PREZENTASIYA REJİMİ ==============
+  // F klavişi və ya düymə ilə açılır, hər problem bir slayd
+  const presentBtn = document.createElement('button');
+  presentBtn.id = 'present-btn';
+  presentBtn.innerHTML = '▶ Prezentasiya rejimi';
+  presentBtn.title = 'F basaraq açın';
+  document.body.appendChild(presentBtn);
+
+  const presentOverlay = document.createElement('div');
+  presentOverlay.id = 'present-overlay';
+  presentOverlay.innerHTML = `
+    <div class="slide-frame">
+      <div class="slide-counter"><span id="slide-current">1</span> / <span id="slide-total">1</span></div>
+      <div class="slide-content" id="slide-content"></div>
+    </div>
+    <div class="slide-controls">
+      <button id="slide-prev">← Əvvəlki</button>
+      <button id="slide-next">Növbəti →</button>
+      <button id="slide-exit">✕ Çıxış (Esc)</button>
+    </div>
+  `;
+  document.body.appendChild(presentOverlay);
+
+  // Bütün slaydları topla: hər səhifə intro + hər problem kartı
+  const slides = [];
+
+  // Cover slide
+  slides.push({
+    type: 'cover',
+    html: `
+      <div class="cover-slide">
+        <div class="eyebrow">ABB MOBİLE · UX AUDIT · 2026</div>
+        <h1>UX Audit Hesabatı</h1>
+        <div class="sub">Müştərinin gözündən: 7 səhifəlik dərin yoxlama</div>
+        <div class="cover-meta">CXUX Team · 2026</div>
+      </div>
+    `
+  });
+
+  // Hər səhifə üçün
+  for (let pi = 1; pi <= 7; pi++) {
+    const hero = document.getElementById('page-' + pi);
+    if (!hero) continue;
+
+    const pageNameEl = hero.querySelector('h1');
+    const pageName = pageNameEl ? pageNameEl.textContent : 'Səhifə ' + pi;
+
+    // Page intro slide
+    const summary = document.querySelector(`[data-page-content="${pi}"]`)?.previousElementSibling?.previousElementSibling;
+    const summaryCard = document.querySelectorAll('.summary-panel')[pi-1];
+    let diagText = '';
+    let statsHtml = '';
+    if (summaryCard) {
+      const diagP = summaryCard.querySelector('.left p');
+      if (diagP) diagText = diagP.textContent;
+      const statCards = summaryCard.querySelectorAll('.stat-card');
+      statsHtml = '<div class="slide-stats">';
+      statCards.forEach(sc => {
+        const num = sc.querySelector('.num')?.textContent || '';
+        const lbl = sc.querySelector('.lbl')?.textContent || '';
+        let cls = '';
+        if (sc.classList.contains('danger')) cls = 'danger';
+        else if (sc.classList.contains('warn')) cls = 'warn';
+        else if (sc.classList.contains('info')) cls = 'info';
+        statsHtml += `<div class="slide-stat ${cls}"><div class="n">${num}</div><div class="l">${lbl}</div></div>`;
+      });
+      statsHtml += '</div>';
+    }
+
+    slides.push({
+      type: 'page-intro',
+      html: `
+        <div class="page-intro-slide">
+          <div class="eyebrow">SƏHIFƏ ${pi}</div>
+          <h1>${pageName}</h1>
+          <p class="diag">${diagText}</p>
+          ${statsHtml}
+        </div>
+      `
+    });
+
+    // Friendly ad → faktiki fayl adı (HTML JS onerror chain işləmir prezentasiyada)
+    const imgMap = {
+      'tarixce.PNG': 'IMG_9436.PNG',
+      'kesfet.PNG': 'IMG_9441.PNG',
+      'dahacox.PNG': 'IMG_9444.PNG',
+      'senedler.PNG': 'IMG_9437.PNG',
+      'kocurme.PNG': 'IMG_9449.PNG',
+      'kart.PNG': 'IMG_9451.PNG',
+      'menyu.PNG': 'IMG_9479.PNG',
+      'redakte.PNG': 'IMG_9439.PNG',
+      'destek.PNG': 'IMG_9446.PNG',
+    };
+
+    // Hər problem üçün
+    const articles = document.querySelectorAll(`[data-page-content="${pi}"] .issue-card`);
+    articles.forEach(art => {
+      const img = art.querySelector('img');
+      // src-i alıb fayl adını çıxar (URL-dən sonuncu hissə)
+      let imgSrc = '';
+      if (img) {
+        const rawSrc = img.getAttribute('src') || '';
+        const fileName = decodeURIComponent(rawSrc.split('/').pop().split('?')[0]);
+        // Əgər friendly ad varsa, IMG_NNNN.PNG-yə çevir
+        const actualName = imgMap[fileName] || fileName;
+        imgSrc = actualName;
+      }
+      const pinNum = art.querySelector('.pin-number')?.textContent || '';
+      const title = art.querySelector('h3')?.textContent || '';
+      const priority = art.querySelector('.priority-badge')?.textContent || '';
+      const prioCls = art.querySelector('.priority-badge')?.className.includes('p0') ? 'p0' :
+                     art.querySelector('.priority-badge')?.className.includes('p1') ? 'p1' : 'p2';
+
+      let problemText = '';
+      let actionHtml = '';
+      let lawText = '';
+      let researchText = '';
+
+      art.querySelectorAll('.section-block').forEach(sec => {
+        const lblEl = sec.querySelector('.lbl');
+        if (!lblEl) return;
+        const cls = lblEl.className;
+        if (cls.includes('action')) {
+          const ul = sec.querySelector('ul');
+          if (ul) actionHtml = ul.outerHTML;
+        } else if (cls.includes('law')) {
+          const p = sec.querySelector('p');
+          if (p) lawText = p.innerHTML;
+        } else if (cls.includes('research')) {
+          const p = sec.querySelector('p');
+          if (p) researchText = p.innerHTML;
+        } else {
+          const p = sec.querySelector('p');
+          if (p) problemText = p.innerHTML;
+        }
+      });
+
+      slides.push({
+        type: 'problem',
+        html: `
+          <div class="problem-slide">
+            <div class="slide-left">
+              <img src="${imgSrc}" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="img-fallback" style="display:none;">
+                <div style="font-size:32px;margin-bottom:8px;">📱</div>
+                <div style="font-size:11px;color:#8A95AA;">Şəkil tapılmadı:</div>
+                <div style="font-size:10px;color:#8A95AA;font-family:monospace;margin-top:4px;">${imgSrc}</div>
+              </div>
+            </div>
+            <div class="slide-right">
+              <div class="meta-row">
+                <span class="num-badge">PROBLEM ${pinNum}</span>
+                <span class="prio-badge ${prioCls}">${priority}</span>
+                <span class="page-ind">Səhifə ${pi}: ${pageName}</span>
+              </div>
+              <h2>${title}</h2>
+              <div class="section">
+                <div class="sec-head problem">PROBLEM NƏDİR</div>
+                <p>${problemText}</p>
+              </div>
+              <div class="section">
+                <div class="sec-head action">NƏ ETMƏLİ</div>
+                <div class="action-box">${actionHtml}</div>
+              </div>
+              <div class="section">
+                <div class="sec-head law">HANSI QAYDAYA ƏSASLANIR</div>
+                <p>${lawText}</p>
+              </div>
+              <div class="section">
+                <div class="sec-head research">TƏDQİQATLAR NƏ DEYİR</div>
+                <p>${researchText}</p>
+              </div>
+            </div>
+          </div>
+        `
+      });
+    });
+  }
+
+  let currentSlide = 0;
+  const slideTotal = slides.length;
+  document.getElementById('slide-total').textContent = slideTotal;
+
+  function showSlide(idx) {
+    if (idx < 0) idx = 0;
+    if (idx >= slideTotal) idx = slideTotal - 1;
+    currentSlide = idx;
+    document.getElementById('slide-content').innerHTML = slides[idx].html;
+    document.getElementById('slide-current').textContent = idx + 1;
+  }
+
+  function enterPresent() {
+    presentOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    showSlide(0);
+  }
+  function exitPresent() {
+    presentOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  presentBtn.addEventListener('click', enterPresent);
+  document.getElementById('slide-exit').addEventListener('click', exitPresent);
+  document.getElementById('slide-prev').addEventListener('click', () => showSlide(currentSlide - 1));
+  document.getElementById('slide-next').addEventListener('click', () => showSlide(currentSlide + 1));
+
+  document.addEventListener('keydown', (e) => {
+    if (presentOverlay.classList.contains('active')) {
+      if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); showSlide(currentSlide + 1); }
+      else if (e.key === 'ArrowLeft') showSlide(currentSlide - 1);
+      else if (e.key === 'Escape') exitPresent();
+    } else {
+      if (e.key === 'f' || e.key === 'F') enterPresent();
+    }
+  });
 </script>
+
+<style>
+/* PREZENTASIYA REJIMI */
+#present-btn { display: none !important; }
+
+#present-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 1000;
+  background: #050B2E;
+  flex-direction: column;
+}
+#present-overlay.active { display: flex; }
+
+.slide-frame {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  padding: 40px 60px;
+  position: relative;
+}
+.slide-counter {
+  position: absolute; top: 24px; right: 32px;
+  color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 600;
+  letter-spacing: 1px;
+}
+.slide-content {
+  background: white; border-radius: 20px; padding: 50px 60px;
+  max-width: 1400px; width: 100%; max-height: calc(100vh - 160px);
+  overflow-y: auto; box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+}
+.slide-controls {
+  display: flex; justify-content: center; gap: 12px;
+  padding: 18px;
+  background: rgba(0,0,0,0.4);
+}
+.slide-controls button {
+  background: rgba(255,255,255,0.1); color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 10px 24px; border-radius: 8px;
+  font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.slide-controls button:hover { background: rgba(255,255,255,0.2); }
+
+/* COVER SLIDE */
+.cover-slide {
+  background: linear-gradient(135deg, #050B2E 0%, #0B1B4F 40%, #1E40FF 100%);
+  color: white; border-radius: 20px;
+  padding: 80px 60px; min-height: 600px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.cover-slide .eyebrow {
+  font-size: 13px; letter-spacing: 3px;
+  font-weight: 700; opacity: 0.7; margin-bottom: 24px;
+}
+.cover-slide h1 { font-size: 80px; font-weight: 700; letter-spacing: -2px; margin: 0 0 20px; color: white; }
+.cover-slide .sub { font-size: 22px; opacity: 0.85; margin-bottom: 40px; }
+.cover-slide .cover-meta { font-size: 14px; opacity: 0.6; margin-top: auto; }
+
+/* PAGE INTRO */
+.page-intro-slide { padding: 20px 0; }
+.page-intro-slide .eyebrow {
+  font-size: 12px; letter-spacing: 2.5px; font-weight: 700;
+  color: #1E40FF; margin-bottom: 16px;
+}
+.page-intro-slide h1 { font-size: 64px; font-weight: 700; letter-spacing: -1px; margin: 0 0 24px; color: #0B1B4F; }
+.page-intro-slide .diag { font-size: 18px; line-height: 1.65; color: #4A5A7A; margin-bottom: 40px; }
+.slide-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.slide-stat {
+  background: #F5F7FB; border-radius: 12px; padding: 24px;
+  border-left: 4px solid #E1E7F2;
+}
+.slide-stat:first-child { border-left-color: #1E40FF; }
+.slide-stat.danger { border-left-color: #C8102E; }
+.slide-stat.warn { border-left-color: #B85C00; }
+.slide-stat.info { border-left-color: #1E40FF; }
+.slide-stat .n { font-size: 42px; font-weight: 700; color: #0B1B4F; letter-spacing: -1px; }
+.slide-stat.danger .n { color: #C8102E; }
+.slide-stat.warn .n { color: #B85C00; }
+.slide-stat.info .n { color: #14497A; }
+.slide-stat .l { font-size: 11px; font-weight: 600; color: #8A95AA; letter-spacing: 1px; text-transform: uppercase; margin-top: 8px; }
+
+/* PROBLEM SLIDE */
+.problem-slide { display: grid; grid-template-columns: 280px 1fr; gap: 40px; }
+.slide-left { background: #F5F7FB; border-radius: 14px; padding: 18px; min-height: 400px; display: flex; align-items: center; justify-content: center; }
+.slide-left img { width: 100%; border-radius: 8px; display: block; max-height: 500px; object-fit: contain; }
+.slide-left .img-fallback { flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 20px; }
+.slide-right { min-width: 0; }
+.slide-right .meta-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+.slide-right .num-badge { background: #0B1B4F; color: white; padding: 4px 10px; border-radius: 5px; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
+.slide-right .prio-badge { padding: 3px 9px; border-radius: 5px; font-size: 11px; font-weight: 700; }
+.slide-right .prio-badge.p0 { background: #FFE6E6; color: #8B0000; border: 1px solid #C8102E; }
+.slide-right .prio-badge.p1 { background: #FFF3CC; color: #7A5A00; border: 1px solid #B85C00; }
+.slide-right .prio-badge.p2 { background: #E6F2FF; color: #14497A; border: 1px solid #1E40FF; }
+.slide-right .page-ind { font-size: 11px; color: #8A95AA; margin-left: auto; }
+.slide-right h2 { font-size: 24px; font-weight: 700; color: #0B1B4F; margin: 0 0 22px; line-height: 1.3; }
+.slide-right .section { margin-bottom: 16px; }
+.slide-right .sec-head {
+  font-size: 11px; letter-spacing: 1.5px;
+  font-weight: 700; text-transform: uppercase;
+  margin-bottom: 8px; padding-bottom: 4px;
+  border-bottom: 2px solid #E1E7F2;
+}
+.slide-right .sec-head.problem { color: #C8102E; border-bottom-color: #FFD0D0; }
+.slide-right .sec-head.action { color: #1E8E3E; border-bottom-color: #C8E6CB; }
+.slide-right .sec-head.law { color: #7A2DA4; border-bottom-color: #E1C8F0; }
+.slide-right .sec-head.research { color: #B85C00; border-bottom-color: #F0D8B5; }
+.slide-right p { font-size: 13px; line-height: 1.6; color: #4A5A7A; margin: 0; }
+.slide-right p b { color: #0B1B4F; }
+.slide-right .action-box ul { list-style: none; padding: 12px 14px; margin: 0; background: #F4F9F5; border-left: 3px solid #1E8E3E; border-radius: 0 8px 8px 0; }
+.slide-right .action-box li { margin-bottom: 8px; font-size: 13px; line-height: 1.5; }
+.slide-right .action-box li:last-child { margin-bottom: 0; }
+.slide-right .action-box .verb { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 9px; font-weight: 700; color: white; margin-right: 6px; vertical-align: middle; }
+.slide-right .action-box .verb.add { background: #1E8E3E; }
+.slide-right .action-box .verb.remove { background: #C8102E; }
+.slide-right .action-box .verb.change { background: #B85C00; }
+.slide-right .action-box .verb.restructure { background: #7A2DA4; }
+</style>
 
 </body>
 </html>
